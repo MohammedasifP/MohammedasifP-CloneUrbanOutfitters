@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bag | Urban Outfitters</title>
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/cart.css">
+  <link rel="stylesheet" href="./styles/slider.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://kit.fontawesome.com/05dfa6a87b.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon"
+    href="https://img.search.brave.com/aNSlvq_0L22JXvZF-X4H5gzLjBhs27qZHoYlp3apefo/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5p/MmRqRnQxWVRZal9j/Z1JObmFYQmpnSGFI/YSZwaWQ9QXBp"
+    alt="logo">
+
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+  <div id="body">
+    <div id="main"></div>
+    <div id="summary">
+      <p>
+        <a>Subtotal</a>
+        <a class="sum"></a>
+      </p>
+      <p>Shipping TBD</p>
+      <p>
+        <a>Estimated Tax
+        </a>
+        <a>$0.0</a>
+      </p>
+      <p><b>Total</b> <b class="sum"></b></p>
+      <button id="continue">Continue</button>
+      <hr>
+      <p id="promo">promo code</p>
+    </div>
+  </div>
+  </div>
+  <div id="slider">
+    <h3>For You</h3>
+    <hr>
+    <div class="carousel" data-flickity='{ "groupCells": 5 }'>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/31722010_011_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>Anastasia Beverly Hills Brow Powder Duo
+          </p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/48195911_020_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>Bamboo Woven Pendant Light Shade</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/63049985_080_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>Beatrix Brushed Bed Blanket</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/59096487_040_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>Alex Modern Blocks Framed Art Print</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/59845693_000_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>BALLS™ Trimmer</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/46261871_070_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>Celestial Sun Light Sculpture</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/64108277_009_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>C7skates UO Exclusive Checkerboard Premium Quad Roller Skate</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/49266935_072_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>Coors Golden Colorado Tee</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/66211160_010_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>BDG Corduroy Dipped-Waistband Pant</p>
+        </div>
+
+      </div>
+      <div class="carousel-cell">
+        <div class="img">
+          <img src="https://images.urbndata.com/is/image/UrbanOutfitters/66947144_007_d?$medium$&qlt=80&fit=constrain"
+            alt="">
+          <p>Hannah Snake Ring Set</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div id="footer"></div>
+</body>
+
+</html>
+<script type="module">
+
+  import navbar from './components/navbar.js'
+  import footer from './components/footer.js'
+  let nav = document.getElementById("navbar");
+
+  nav.innerHTML = navbar()
+
+  // let cart = JSON.parse(localStorage.getItem("cart"))
+
+
+  let foot = document.getElementById("footer");
+  foot.innerHTML = footer()
+
+  document.getElementById("back").addEventListener("click", function () {
+    window.location.href = "index.html"
+  })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  // let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+  // console.log(cart);
+  let main = document.getElementById("main");
+  let total = 0;
+  function display(cart) {
+    total = 0;
+    main.innerHTML = null;
+    cart.map(function (elem, index) {
+      console.log(elem, index);
+      let div = document.createElement("div");
+      // div.innerHTML = ` <img
+      //   src=${elem.img1}
+      //   alt="">
+      // <div>
+      //   <p id="name">${elem.name}</p>
+      //   <p id="size"><b>size </b >${elem.size}</p>
+      //   <p id="name"><b>brand </b >${elem.brand}</p>
+      //   <p id="size"><b>color </b >${elem.color}</p>
+      // </div>
+      // <p id="price"><b>Price </b >$${elem.price}</p>
+      // <select name="" id="quantity">
+      //   <option value="1">1</option>
+      //   <option value="2">2</option>
+      //   <option value="3">3</option>
+      //   <option value="4">4</option>
+      //   <option value="5">5</option>
+      // </select>
+      // <div>
+      //   <p id="total"><b>Total </b >$${elem.price}</p>
+      //   <p id="remove">Remove</p>
+      // </div>`
+      let img = document.createElement("img");
+      img.src = elem.img1;
+      let div1 = document.createElement("div");
+      let div2 = document.createElement("div");
+      let name = document.createElement("p");
+      name.textContent = `name → ⟬${elem.name}⟭`;
+      let size = document.createElement("p");
+      size.textContent = `size → ⟬${elem.size}⟭`;
+      let brand = document.createElement("p");
+      brand.textContent = `brand → ⟬${elem.brand}⟭`
+      let color = document.createElement("p");
+      color.textContent = `color → ⟬${elem.color}⟭`;
+      let price = document.createElement("p");
+      price.textContent = `price → ⟬$${elem.price}⟭`
+
+      let total_p = document.createElement("p");
+      total_p.textContent = `price $${elem.price}`
+
+      let remove = document.createElement("button");
+      remove.setAttribute("class", "remove_btn")
+      remove.textContent = "remove";
+      div1.append(name, size, brand, color);
+      // <select name="" id="quantity">
+      //   <option value="1">1</option>
+      //   <option value="2">2</option>
+      //   <option value="3">3</option>
+      //   <option value="4">4</option>
+      //   <option value="5">5</option>
+      // </select>
+      div2.append(total_p, remove);
+      div.append(img, div1, div2);
+
+      total += Number(elem.price)
+      console.log(total);
+      remove.addEventListener("click", function () {
+        console.log(elem, index);
+        remove_cart(elem, index);
+      })
+      main.append(div)
+      // console.log(main);
+    });
+
+    let sum = document.querySelectorAll(".sum")
+    for (let i = 0; i < sum.length; i++) {
+      sum[i].textContent = `$${total}`;
+
+    }
+    localStorage.setItem("total", JSON.stringify(total));
+  }
+
+  // let id = JSON.parse(localStorage.getItem("id")) || null;
+  // async function getProduct() {
+
+  //   try {
+  //     let response = await fetch(`https://urban-out-fitters-backend.herokuapp.com/bag/${id}`);
+
+  //     let data = await response.json();
+  //     console.log(data);
+  //     document.querySelector(".fa-shopping-bag").innerHTML = data.length;
+  //     display(data)
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
+  // getProduct()
+
+  let token = JSON.parse(localStorage.getItem("token")) || null;
+  async function getProduct() {
+
+    try {
+      let response = await fetch(`https://urban-out-fitters-backend.herokuapp.com/bag`, {
+      // let response = await fetch(`http://localhost:5500/bag`, {
+
+        method: "GET",
+        headers: {
+          "Access-Control-Allow-Headers": "Accept",
+          "Content-Type": "application/json",
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      let data = await response.json();
+      console.log(data);
+      document.querySelector(".fa-shopping-bag").innerHTML = data.length;
+      display(data)
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  getProduct()
+
+
+  function remove_cart(elem, index) {
+    // console.log(elem, index);
+    let remove_id = elem._id;
+    console.log(remove_id);
+    deleteProduct()
+    async function deleteProduct() {
+
+      try {
+
+        let response = await fetch(`https://urban-out-fitters-backend.herokuapp.com/bag/${remove_id}`, {
+
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+
+        let data1 = await response.json();
+        getProduct()
+      } catch (err) {
+        console.log(err);
+      }
+
+    }
+    // console.log(data1);
+    // cart.splice(index, 1);
+    total -= Number(elem.price);
+    // localStorage.setItem("cart", JSON.stringify(cart));
+    // console.log(index);
+    // location.reload()
+  }
+
+
+
+  let move = document.getElementById("continue");
+  move.addEventListener("click", function () {
+    console.log(move);
+    window.location.href = "checkout.html"
+  })
+
+
+</script>
